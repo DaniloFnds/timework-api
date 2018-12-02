@@ -1,11 +1,12 @@
 package br.com.danilo.timework.repository;
 
 import br.com.danilo.timework.domain.Timer;
-import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
-import reactor.core.publisher.Flux;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface TimerRepository extends ReactiveMongoRepository<Timer, Integer> {
+import java.util.List;
 
-    Flux<Timer> findByDataLancamento(String dataLancamento);
+public interface TimerRepository extends JpaRepository<Timer, Integer> {
+
+    List<Timer> findByDataLancamento(String dataLancamento);
 
 }

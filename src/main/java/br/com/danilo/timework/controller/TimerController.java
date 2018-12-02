@@ -22,22 +22,22 @@ public class TimerController {
     }
 
     @RequestMapping(value = "/timer", method = RequestMethod.GET)
-    public Flux<Timer> getAll() {
+    public List<Timer> getAll() {
         return timerRepository.findAll();
     }
 
     @GetMapping("/timer/{data}")
-    public Flux<Timer> getAll(@PathVariable String data) {
+    public List<Timer> getAll(@PathVariable String data) {
         return timerRepository.findByDataLancamento(data);
     }
 
     @PostMapping("/timer")
-    public Mono<Timer> adicionarTimer(@RequestBody Timer timer) {
+    public Timer adicionarTimer(@RequestBody Timer timer) {
         return timerRepository.save(timer);
     }
 
     @PutMapping("/timer")
-    public Mono<Timer> atualizarTime(@RequestBody Timer timer) {
+    public Timer atualizarTime(@RequestBody Timer timer) {
         return timerRepository.save(timer);
     }
 }
