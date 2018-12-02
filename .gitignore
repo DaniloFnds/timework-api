@@ -27,3 +27,4 @@
 /.mvn/*
 mvnw
 mvnw.cmd
+.vscode/settings.json
