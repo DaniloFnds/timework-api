@@ -9,7 +9,7 @@ import reactor.core.publisher.Mono;
 
 import java.util.List;
 
-@CrossOrigin(origins = "https://timerwork.herokuapp.com/")
+@CrossOrigin
 @RestController
 @RequestMapping
 public class TimerController {
